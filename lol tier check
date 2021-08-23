@@ -1,0 +1,64 @@
+# 초기 스코어 값(브론즈 5)
+score = 1000
+
+-------------------------------------
+# 포지션 측정 메소드
+def position(score):
+  userGrade = ''
+  userTier = 0
+
+  grade = ['아이언','브론즈','실버','골드','플래티넘','다이아몬드','마스터','그랜드마스터','챌린저']
+  tier = [5, 4, 3, 2, 1]
+
+  userGrade = grade[int(score / 500) - 1]
+  userTier = tier[int((score - 500 * int(score / 500)) / 100)]
+  remainPoint = int(str(score)[-2:])
+
+  return [userGrade, userTier, remainPoint]
+  
+---------------------------------
+
+# 50% 확률에 따른 승리 패배 측정 메소드
+import random
+successList = [0, 1]
+result = ""
+
+def gameStart(score):
+  catchNum = successList[int(random.random()*2)]
+  if catchNum == 1:
+    score = score + 12
+    result = "승리"
+  else:
+    score = score - 12
+    result = "패배"
+  
+  return [score, result]
+  -------------------------------------
+  
+  # 경기 결과 조회(횟수는 range 값으로 조절)
+for i in range(500):
+  score, result = gameStart(score)
+  position(score)
+  grade, tier, remainPoint = position(score)
+  print('당신의 현재 티어는',grade,' ',tier, '이고 포인트는 ',remainPoint,'LP 입니다')
+  
+  --------------------------
+  # 주작판별 코드
+import random
+successList = [0, 1]
+wincnt = 0
+losecnt = 0
+
+for i in range(1000):
+  catchNum = successList[int(random.random()*2)]
+  if catchNum == 1:
+    score = score + 12
+    wincnt = wincnt + 1
+  else:
+    score = score - 12
+    losecnt = losecnt + 1
+
+
+print(wincnt,' ', losecnt)
+  
+  

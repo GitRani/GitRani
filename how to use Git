@@ -17,7 +17,7 @@ repo(=repository) : 원격 저장소. 여기서는 github 의 저장소를 가�
 
 만약 혼자 사용하면 git push 만 하면 되나, organization 같은 경우
 다수의 사용자들이 문서를 수정하기 때문에, 다음의 과정을 추가로 진행한다.
-4. git pull (if you are personal, don't need this process.)
+4. git pull (if you are personal, you don't need this process.)
 5. git push
 
 ------------------------------------------

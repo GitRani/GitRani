@@ -1,0 +1,92 @@
+import os
+import openai
+import pandas as pd
+
+from io import StringIO
+from pykrx import stock
+from pykrx import bond
+
+start_date = ""
+end_date = ""
+
+def local_llm__samsung_stock_guess(start_date, end_date):
+    csv_buf = StringIO()
+    start_date = str(start_date)
+    end_date = str(end_date)
+
+    df = stock.get_market_ohlcv(start_date, end_date, "005930")
+    df.to_csv(csv_buf)
+
+    csv_data = csv_buf.getvalue()
+
+    return csv_data
+
+def analysis_invest_samsung(invest_data, model):
+    os.environ['OPENAI_BASE_URL'] = 'http://localhost:11434/v1'
+    os.environ['OPENAI_API_KEY'] = 'sk-dummy'
+    os.environ['OPENAI_DEFAULT_MODEL'] = 'aya:8b-23-q4_K_M'
+    history = ""
+
+    if model == "aya":
+        os.environ['OPENAI_DEFAULT_MODEL'] = 'aya:8b-23-q4_K_M'
+    elif model == "eeve":
+        os.environ['OPENAI_DEFAULT_MODEL'] = 'bnksys/yanolja-eeve-korean-instruct-10.8b:latest'
+    elif model == "llama":
+        os.environ['OPENAI_DEFAULT_MODEL'] = 'llama3:8b'
+    elif model == "gemma":
+        os.environ['OPENAI_DEFAULT_MODEL'] = 'gemma:7b'
+    elif model == "mistral":
+        os.environ['OPENAI_DEFAULT_MODEL'] = 'mistral:7b'
+    elif model == "phi3":
+        os.environ['OPENAI_DEFAULT_MODEL'] = 'phi3:14b'
+
+    gen = openai.chat.completions.create(
+        model=os.getenv("OPENAI_DEFAULT_MODEL"),
+        messages=[
+            {
+                "role": "system",
+                "content": """
+                
+          * you're an investment consultant expert.
+          * 제공되는 자료에 있는 날짜,시가,고가,저가,종가,거래량,등락률을 토대로 주가 동향을 예측하세요.
+          * 구체적인 수치를 이용해서 이해를 도우세요.
+          * 답변을 할 때는 한국말을 사용하세요.
+          
+                            """
+            },
+            {
+                "role": "user",
+                "content": invest_data
+            }
+        ],
+        temperature=0.8,
+        max_tokens=5000,
+        top_p=1,
+        frequency_penalty=0,
+        presence_penalty=0,
+        stream=True
+    )
+
+    while True:
+        try:
+            # response 는 다음과 같이 생겼음. 여기서 chocies의 delta 속성을 가져와서 여기의 content를 가져오는 방식임.
+            # ChatCompletionChunk(id='chatcmpl-263',
+            # choices=[Choice(delta=ChoiceDelta(content='제', function_call=None, role='assistant', tool_calls=None), finish_reason=None, index=0)],
+            # created=1717829720, model='bnksys/yanolja-eeve-korean-instruct-10.8b:latest', object='chat.completion.chunk', system_fingerprint='fp_ollama')
+            response = next(gen)
+            delta = response.choices[0].delta
+            if delta.content is not None:
+
+                if history != "":
+                    if delta.content == '.' and history[-1] not in "1234567890":
+                        print('\n')
+
+                # End='' 는 개행되지 않고 이어서 결과가 출력되도록 하는 효과
+                print(delta.content, end='')
+                history = history + delta.content
+            else:
+                print("ERRRRR")
+                break
+        except StopIteration:
+            return history
+            break

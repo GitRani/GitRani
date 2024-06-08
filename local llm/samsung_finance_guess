@@ -85,7 +85,6 @@ def analysis_invest_samsung(invest_data, model):
                 print(delta.content, end='')
                 history = history + delta.content
             else:
-                print("ERRRRR")
                 break
         except StopIteration:
             return history

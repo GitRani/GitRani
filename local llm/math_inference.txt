@@ -1,0 +1,215 @@
+local llm의 수학지능
+
+다음의 문제들을 풀어보세요. 답변의 대한 이유도 간단하게 말해줘!"
+          
+                    1. 1234 * 1234는 뭐야? 
+                    2. 주어진 수 중에서 홀수를 모두 더해서 짝수를 만들어 줘: 15, 32, 5, 13, 82, 7, 1.
+                    3. 나는 시장에 가서 사과 10개를 샀어. 사과 2개를 이웃에게 주고, 2개를 수리공에게 주었어. 그리고 사과 5개를 더 사서 1개는 내가 먹었어. 
+나는 몇 개의 사과를 가지고 있었니? 
+                    4. 내가 6살이었을 때 내 여동생은 내 나이의 절반인 나이였어. 지금 나는 70살이라면 여동생은 몇 살일까?
+                    5. 1부터 100까지의 수를 모두 더하면 얼마일까?
+
+
+aya:8b-23-q4_K_M의 답변입니다 ===================================
+이 문제들에 대한 답변과 간단한 설명입니다!
+
+1. 1234 * 1234 = 1,512,456
+이 문제는 곱셈을 사용합니다. 1234를 두 번 곱하면 15,124가 되고, 여기에 다시 1234를 곱하면 최종 답인 1,512,456을 얻을 수 있습니다.
+
+2. 홀수를 더하면 짝수가 됩니다: 15 + 32 + 82 = 129 (129는 짝수)
+이 문제는 수학적 연산만 사용합니다. 주어진 홀수들(15, 32, 5, 13, 82, 7)을 더하면 모두 129가 되어 짝수가 됩니다.
+
+3. 사과 개수: 처음에 10개 + 2개 - 2개 + 5개 + 1개 = 14개
+이 문제는 간단한 산술 연산만 사용합니다. 사과를 구입하고, 주고, 먹고, 더 구매한 후의 사과 개수를 계산하면 14개가 됩니다.
+
+4. 여동생 나이: 내 여동생은 내 나이의 절반이었으므로, 내가 6살일 때 그녀는 3살이었을 것입니다. 지금 내가 70살이니, 그녀는 67살이 됩니다.
+이 문제는 간단한 수학 논리만 사용합니다. 내 나이의 절반은 6살의 절반인 3살이므로, 지금 여동생의 나이는 67살이 됩니다.
+5. 1부터 100까지의 합: 1 + 2 + 3 + ... + 99 + 100 = 5,050
+이 문제는 등차수열의 합 공식을 사용합니다. 1부터 100까지의 합은 등차수열 1 + 2 + ... + 99 + 100로 계산할 수 있으며, 그 합은 n(n+1)/2로 표현되는데, n은 마지막 항의 값이고 100일 경우 5,050이 됩니다.
+
+bnksys/yanolja-eeve-korean-instruct-10.8b:latest의 답변입니다 ===================================
+1. 1234 * 1234 = 1,536,966입니다.
+
+이유: 두 숫자를 곱하기 위해서는 각 자리수를 곱하고 결과를 더합니다. 이 경우 결과는 다음과 같습니다:
+
+1 * 4 = 4
+2 * 4 = 8
+3 * 4 = 12
+4 * 4 = 16
+
+이 숫자들을 합하면 총합은 1,536,966입니다.
+
+2. 주어진 수 중에서 홀수를 모두 더해서 짝수를 만들어 줍니다: 15, 32, 5, 13, 82, 7, 1
+
+이유: 먼저 홀수들을 나열해봅시다:
+
+15 (홀수)
+5 (홀수)
+13 (홀수)
+7 (홀수)
+
+이제 이 숫자들을 더합니다:
+
+15 + 5 + 13 + 7 = 40
+
+마지막으로, 짝수를 만들기 위해 홀수의 합에 2를 빼줍니다:
+
+40 - 2 = 38
+
+따라서 주어진 수 중에서 홀수들을 모두 더해서 만든 짝수는 38입니다.
+
+3. 시장에 가서 사과 10개를 샀습니다. 사과 2개를 이웃에게 주고, 2개를 수리공에게 주었습니다. 그리고 사과 5개를 더 사서 1개는 제가 먹었습니다.
+
+이유: 처음에 저는 사과 10개를 가지고 있었습니다.
+
+사과 2개를 이웃에게 준 후 남은 것은 8개의 사과입니다.
+
+사과 2개를 수리공에게 준 후 남은 것은 6개의 사과입니다.
+
+사과 5개를 더 사서 1개는 제가 먹은 후 남은 것은 4개의 사과입니다.
+
+따라서 저는 총 4개의 사과를 가지고 있었습니다.
+
+4. 제가 6살이었을 때 여동생은 제 나이 절반인 나이었습니다. 지금 제가 70살이라면 여동생은 몇 살일까요?
+
+이유: 먼저, 제가 6살일 때의 여동생의 나이를 찾아야 합니다. 이를 위해 제 나이의 절반을 계산합니다:
+
+6 / 2 = 3
+
+이제, 제가 70살이므로 여동생은 다음과 같은 나이입니다:
+
+70 - 3 = 67
+
+따라서 여동생은 지금 67살입니다.
+
+5. 1부터 100까지의 수를 모두 더하면 얼마일까요?
+
+이유: 이 문제를 해결하기 위해서는 간단한 공식을 사용할 수 있습니다:
+
+(n * (n + 1)) / 2
+
+여기서 n은 합을 구하고자 하는 숫자 범위입니다. 이 경우, n = 100입니다.
+
+이제 공식을 적용해봅시다:
+
+(100 * (100 + 1)) / 2 = 5050
+
+따라서 1부터 100까지의 수를 모두 더하면 총합은 5,050입니다.
+
+llama3:8b의 답변입니다 ===================================
+I'd be happy to help you solve these problems! 😊
+
+**1. 1234 * 1234**
+
+The answer is: **1515776**
+
+Why? Because we're multiplying two numbers together, and the result is the product of those numbers.
+
+**2. Summing up odd numbers from a given set**
+
+The sum of all the odd numbers in the set is:
+
+15 + 5 + 13 + 7 + 1 = **41**
+Why? Because we're adding up only the odd numbers (15, 5, 13, 7, and 1) from the original set.
+**3. How many apples do I have after all the transactions?**
+
+Let's break it down step by step:
+* I started with 10 apples.
+* I gave 2 apples to my neighbor, so I had 8 left.
+* Then, I gave 2 apples to the repairman, so I had 6 left.
+* Next, I bought 5 more apples, making a total of 11 apples.
+* Finally, I ate 1 apple, leaving me with... **10** apples! 🍎
+
+Why? Because we're tracking the changes in my apple count step by step.
+
+**4. How old is my sister now that I'm 70 years old?**
+
+Let's think about it:
+
+* When I was 6 years old, my sister was half my age, which means she was **3** years old.
+* Now that I'm 70 years old, if we add 64 (the difference between our current ages) to her original age of 3, we get... **67**!
+
+Why? Because we're using the fact that my sister's age is half my age when I was 6 years old, and then adding the difference in our ages to find her current age.
+**5. What is the sum of all numbers from 1 to 100?**
+
+The answer is: **5050**
+
+Why? Because we're adding up all the integers from 1 to 100 using a formula:
+
+1 + 2 + ... + 99 + 100 = 5050
+
+This is a classic example of an arithmetic series, and the sum can be calculated using various methods. 😊
+
+gemma:7b의 답변입니다 ===================================
+1. 1234 * 1234 = 1,515,336
+
+
+2. 홀수는 15, 5, 7, 1입니다. 이들을 모두 더하면 38이 됩니다.
+
+
+3. 사과 10개에서 2개를 이웃에게 주고 2개를 수리공에게 주니 사과 10개에서 4개가 남습니다. 그리고 사과 5개를 더 사서 1개는 내가 먹었으므로 사과 9개가 남습니다.
+
+
+4. 여동생은 내 나이의 절반이었으므로 현재 나이가 70살이라면 여동생은 35살입니다.
+
+5. 1부터 100까지의 수를 모두 더하면 5050입니다.
+
+mistral:7b의 답변입니다 ===================================
+ 1. 1234 * 1234 = 1,549,376 (1234 * 1234는 각 자리수의 제곱의 합으로 이루어져 있기 때문에 1^2 + 2^2 + 3^2 + 4^2 = 1 + 4 + 9 + 16 = 20이고, 20 * 1234 = 1,549,376)
+
+2. 홀수는 15, 5, 1, 7로 총합은 38이다. 짝수를 만들기 위해서는 38에서 짝수를 찾아야 한다. 가장 작은 짝수는 4이고, 38 - 4 = 34이다. 따라서 34을 더하면 총합이 60이 되어 짝수가 된다.
+3. 사과를 시작했을 때 10개를 가지고 있었다. 그리고 2개를 이웃에게 주고, 2개를 수리공에게 주었으니 10 - 2 - 2 = 6개의 사과를 남겼다. 나는 먹은 사과는 5개이므로 남은 사과는 6 - 5 = 1개였다.
+
+4. 내가 6살이었을 때 여동생은 내 나이의 절반인 나이였으니 3살이었다. 지금 나는 70살이라면, 70 / 2 = 35살이 된 사람이 여동생이다.
+
+5. 1부터 100까지의 수를 모두 더하면 5050이다. (합을 구할 때는 1부터 100까지의 수들의 합과 101부터 200까지의 수들의 합을 각각 구한 후 빼주면 된다. 1부터 100까지의 합은 5050이고, 101부터 200까지의 합은 100 * (1 + 100) / 2 = 5050이므로 두 합을 빼주면 0이 된다.)
+
+phi3:14b의 답변입니다 ===================================
+ 1. 1234 * 1234은 1,522,756이다. 이는 큰 숫자를 곱하기 위해 소변제 방법을 사용하여 구현할 수 있습니다:
+   - 1234 * 1234 = (1000 + 200 + 30 + 4) * (1000 + 200 + 30 + 지)
+   - 곱셈을 수행하고 결과를 합산:
+     - 1,000,000 + 400,000 + 90,000 + 36,000 + 200 * 200 + 30 * 200 + 4 * 200
+     - 1,522,756
+
+2. 짝수를 만들기 위해서는 홀수의 합을 찾아야 합니다: 15 + 5 + 13 + 7 = 40. 이제 짝수를 만드는 데 사용할 수 있는 옵션을 찾아야 합니다: 32, 82.
+   그러나 40은 이미 짝수이기 때문에 추가 숫자를 찾아야 하지 않습니다. 따라서 홀수의 합은 40입니다.
+3. 사과 10개에서 시작한 것이고, 2개를 이웃에게, 2개를 수리공에게 주었으므로 4개의 사과가 나머지였습니다. 그런 다음 5개를 더 구입하여 9개의 사과를 갖게 됩니다. 마지막으로, 1개를 먹은 후 8개의 사과가 남아 있습니다.
+4. 6세이기 전에 여동생은 그의 나이의 절반인 3세였습니다. 현재 70세라면, 그들의 나이 차이는 44세가 아니라 6 - 3 = 3세입니다. 따라서 여동�지�는 70 - 3 = 67세입니다.
+5. 1부터 100까지의 수를 모두 더하면 사계적인 합이 됩니다. 사계적 시퀀스에는 n(n+1)/2라고 말하는 공식이 있습니다.
+   - 1부터 100까지의 합계 = 100 * (100 + 1) / 2 = 5,050.
+
+phi3:latest의 답변입니다 ===================================
+ 1. 1234 * 1 Written in Python, the multiplication of two numbers can be performed using the `*` operator. So, 1234 multiplied by 1234 is:
+   ```python
+   1234 * 1234 = 1516756
+   ```
+
+2. To solve this problem, we'll filter out odd numbers and sum them up to get an even number. Here's the Python code for it:
+   ```python
+   nums = [15, 32, 5, 13, 82, 7, 1]
+   result = sum(num for num in nums if num % 2 != 0) - min(nums)
+   print(result)  # Output: 94 (since 15 + 13 + 7 = 35 and we subtract the smallest odd number, which is 5)
+   ```
+
+3. To find out how many apples you have after all transactions, let's calculate it step by step:
+   - Start with 10 apples.
+   - Gave away 2 to a neighbor: 10 - 2 = 8 apples left.
+   - Sold 2 to the repair shop: 8 - 2 = 6 apples left.
+   - Bought 5 more: 6 + 5 = 11 apples now.
+   - Ate one apple yourself: 11 - 1 = 10 apples remaining.
+   
+   So, you have **10** apples in total.
+
+4. If you are currently 70 years old and your younger sister is half of your age at that time, she would be:
+   ```python
+   70 / 2 = 35
+   ```
+   Your younger sister is **35** years old now.
+
+5. To find the sum of all numbers from 1 to 100, you can use the formula for the sum of an arithmetic series: `n(n + 1) / 2`, where `n` is the last number in the sequence (in this case, 100). Here's how it looks in Python:
+   ```python
+   total_sum = 100 * (100 + 1) // 2
+   print(total_sum)  # Output: 5050
+   ```
+   
+The sum of all numbers from 1 to 100 is **5050**.

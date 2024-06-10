@@ -1,4 +1,6 @@
 # docker와 비슷해서 친근함.
+# Dockerfile -> Modelfile
+# 70B 모델 퀀타이즈 1B(.gguf convert) -> Modelfile 하면?
 
 (venv) gorani@rani-MacBookPro ProjectManaging % ollama list                                            
 NAME                                                    ID              SIZE    MODIFIED   
